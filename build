@@ -1,0 +1,11 @@
+echo "build js..."
+sencha create jsb -a index.html -p app.jsb
+sencha build -p app.jsb -d ./
+echo "build css..."
+cd resources/sass/
+compass compile app.scss
+cd ../../
+echo "compress js..."
+java -jar ~/tools/yuicompressor-2.4.7.jar --charset utf8 sdk/sencha-touch-all.js -o sdk/sencha-touch-all.min.js
+java -jar ~/tools/yuicompressor-2.4.7.jar --charset utf8 app-all.js -o app-all.min.js
+echo "SUCCESS COMPLETE!"
