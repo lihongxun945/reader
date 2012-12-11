@@ -28,3 +28,6 @@ pullrefresh插件进行了修改
 alias reader="cd ~/zhihu/zhihu/static/reader"
 alias readercompile="cd ~/zhihu/zhihu/static/reader && sencha create jsb -a debug.html -p app.jsb3 && sencha build -p app.jsb3 -d . && yuic app-all.js -o app-all.min.js && cd resources/sass && compass compile" #编译压缩前端
 '''
+=======
+reader
+======
